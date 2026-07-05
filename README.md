@@ -229,4 +229,3 @@ Interests:
 GitHub: [http://github.com/Farhan3376](http://github.com/Farhan3376)
 
 LinkedIn: [www.linkedin.com/in/farhan-shahid-robotics](http://www.linkedin.com/in/farhan-shahid-robotics)
-# FIFA-WORLD-CUP-2026-PREDICTION
