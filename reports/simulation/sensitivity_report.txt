@@ -1,0 +1,20 @@
+============================================================
+        MODEL SENSITIVITY & STABILITY ANALYSIS
+============================================================
+
+Average Win Probability Shift per 100 Elo points: 8.70%
+Average Win Probability Shift per 0.1 Form points: 0.23%
+
+Elo Sensitivity By Matchup (Win Prob shift per 100 Elo):
+  * Argentina vs Brazil      : +10.77%
+  * England vs Croatia       : +11.21%
+  * USA vs Mexico            : +10.58%
+  * Germany vs Spain         : +0.57%
+  * France vs Senegal        : +10.39%
+
+Form Sensitivity By Matchup (Win Prob shift per 0.1 Form):
+  * Argentina vs Brazil      : -0.24%
+  * England vs Croatia       : +0.40%
+  * USA vs Mexico            : -0.17%
+  * Germany vs Spain         : +0.13%
+  * France vs Senegal        : +0.23%

@@ -1,0 +1,21 @@
+============================================================
+FIFA World Cup 2026 - Preprocessing Summary
+============================================================
+
+Raw rows loaded         :     49,493
+Rows removed (all steps):         18
+Clean rows retained     :     49,475
+
+Date range              : 1872-11-30  ->  2026-06-27
+Unique teams            :        336
+Unique tournaments      :        200
+
+Result distribution
+-------------------
+  Home wins             :     24,244  (49.0%)
+  Draws                 :     11,253  (22.7%)
+  Away wins             :     13,978  (28.3%)
+
+Remaining missing values:     48,798
+Outlier matches flagged :         10
+============================================================

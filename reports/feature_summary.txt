@@ -1,0 +1,68 @@
+============================================================
+    FIFA World Cup 2026 - Feature Engineering Summary
+    ============================================================
+
+    Enriched dataset shape   : 49,475 rows  x  46 columns
+    ML feature matrix shape  : 49,475 rows  x  31 columns
+
+    Features generated       : 30  (excl. target)
+    Target column            : result  (0=Home Win, 1=Draw, 2=Away Win)
+
+    Elo difference (home - away)
+    ----------------------------
+      Mean   :      8.3
+      Std    :    186.0
+      Min    :  -1020.0
+      Max    :   1031.2
+
+    Home form score (last 5, normalised 0-1)
+    ----------------------------
+      Mean   :    0.466
+      Std    :    0.240
+
+    Tournament type distribution
+    ----------------------------
+    tournament_type
+friendly            18386
+other               14684
+world_cup_qual       8771
+continental_qual     5151
+continental_cup      1369
+world_cup            1036
+other_major            78
+
+    NaN counts in ML feature matrix
+    --------------------------------
+    home_elo_before                0
+away_elo_before                0
+elo_diff                       0
+home_fifa_rank             49475
+away_fifa_rank             49475
+fifa_rank_diff             49475
+home_overall_win_pct         141
+home_draw_pct                141
+home_loss_pct                141
+home_avg_goals_scored        141
+home_avg_goals_conceded      141
+home_avg_goal_diff           141
+home_games_played            141
+away_overall_win_pct         195
+away_draw_pct                195
+away_loss_pct                195
+away_avg_goals_scored        195
+away_avg_goals_conceded      195
+away_avg_goal_diff           195
+away_games_played            195
+home_home_win_pct            327
+away_away_win_pct            321
+home_form                    141
+away_form                    195
+home_rest_days                 0
+away_rest_days                 0
+is_neutral                     0
+tournament_importance          0
+year                           0
+month                          0
+result                         0
+
+    ============================================================

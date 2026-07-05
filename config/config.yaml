@@ -1,0 +1,77 @@
+# ===========================================================================
+# FIFA World Cup 2026 Prediction - Central Configuration
+# ---------------------------------------------------------------------------
+# All tunable parameters live here so that no value is hard-coded in the
+# Python source. Paths are resolved relative to the project root by
+# src/config.py using pathlib.
+# ===========================================================================
+
+project:
+  name: "FIFA World Cup 2026 Match Winner Prediction"
+  random_seed: 42
+
+# ---------------------------------------------------------------------------
+# Data sources
+# ---------------------------------------------------------------------------
+# The primary source is the open "International football results from 1872"
+# dataset maintained by martj42 on GitHub (raw CSV, no API key required).
+# Each entry is downloaded into data/raw/ with its declared filename.
+# `required: true` files abort collection on failure; optional files only warn.
+# ---------------------------------------------------------------------------
+data_sources:
+  results:
+    url: "https://raw.githubusercontent.com/martj42/international_results/master/results.csv"
+    filename: "results.csv"
+    required: true
+    description: "All international matches: date, teams, scores, tournament, venue."
+  shootouts:
+    url: "https://raw.githubusercontent.com/martj42/international_results/master/shootouts.csv"
+    filename: "shootouts.csv"
+    required: false
+    description: "Penalty shootout winners (used to resolve knockout draws)."
+  goalscorers:
+    url: "https://raw.githubusercontent.com/martj42/international_results/master/goalscorers.csv"
+    filename: "goalscorers.csv"
+    required: false
+    description: "Per-goal scorer data. Placeholder for future player statistics."
+
+# Optional ranking source. If unavailable, an Elo rating is computed from the
+# match history itself in the feature-building stage (no external dependency).
+rankings:
+  fifa:
+    url: ""              # leave empty -> skip download, fall back to Elo
+    filename: "fifa_ranking.csv"
+    required: false
+    description: "Historical FIFA rankings, merged as-of each match date."
+
+# ---------------------------------------------------------------------------
+# Network / download behaviour
+# ---------------------------------------------------------------------------
+download:
+  timeout_seconds: 60
+  max_retries: 3
+  retry_backoff_seconds: 3
+  chunk_size_bytes: 32768
+  user_agent: "FIFA-WC2026-Pipeline/1.0 (+portfolio-project)"
+  # If a download fails and no cached copy exists, generate a small synthetic
+  # sample so the rest of the pipeline can still be demonstrated end-to-end.
+  allow_synthetic_fallback: true
+  synthetic_rows: 2000
+
+# ---------------------------------------------------------------------------
+# Output filenames (created by later phases)
+# ---------------------------------------------------------------------------
+outputs:
+  matches_clean: "matches_clean.csv"
+  matches_features: "matches_features.csv"
+  matches_final: "matches_final.csv"
+  validation_report: "validation_report.txt"
+  preprocessing_summary: "preprocessing_summary.txt"
+
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+logging:
+  level: "INFO"          # DEBUG | INFO | WARNING | ERROR
+  log_filename: "pipeline.log"
+  console: true

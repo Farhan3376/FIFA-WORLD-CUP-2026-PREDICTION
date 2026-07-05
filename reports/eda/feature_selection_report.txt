@@ -1,0 +1,140 @@
+======================================================================
+         FIFA WORLD CUP 2026 PREDICTION - FEATURE SELECTION REPORT
+======================================================================
+Initial Dataset Shape : (49475, 37)
+Final Dataset Shape   : (49475, 16)
+Total Initial Features: 36
+Total Selected Features: 15
+Target Column         : result
+
+----------------------------------------------------------------------
+1. OUTLIER WINSORIZATION DETAILS (1% and 99% quantiles)
+----------------------------------------------------------------------
+Continuous Feature             | Total Capped Values  | % of Dataset
+----------------------------------------------------------------------
+away_avg_goal_diff             | 990                  | 2.00      %
+away_avg_goals_conceded        | 990                  | 2.00      %
+away_avg_goals_scored          | 987                  | 1.99      %
+away_away_win_pct              | 495                  | 1.00      %
+away_draw_pct                  | 420                  | 0.85      %
+away_elo_before                | 990                  | 2.00      %
+away_form                      | 0                    | 0.00      %
+away_games_played              | 494                  | 1.00      %
+away_loss_pct                  | 965                  | 1.95      %
+away_overall_win_pct           | 495                  | 1.00      %
+away_rest_days                 | 67                   | 0.14      %
+elo_diff                       | 990                  | 2.00      %
+elo_win_prob                   | 990                  | 2.00      %
+form_diff                      | 851                  | 1.72      %
+games_played_diff              | 986                  | 1.99      %
+goal_avg_diff                  | 990                  | 2.00      %
+goal_conceded_avg_diff         | 990                  | 2.00      %
+home_avg_goal_diff             | 990                  | 2.00      %
+home_avg_goals_conceded        | 990                  | 2.00      %
+home_avg_goals_scored          | 987                  | 1.99      %
+home_draw_pct                  | 393                  | 0.79      %
+home_elo_before                | 990                  | 2.00      %
+home_form                      | 0                    | 0.00      %
+home_games_played              | 487                  | 0.98      %
+home_home_win_pct              | 484                  | 0.98      %
+home_loss_pct                  | 985                  | 1.99      %
+home_overall_win_pct           | 495                  | 1.00      %
+home_rest_days                 | 73                   | 0.15      %
+home_vs_away_field_pct         | 981                  | 1.98      %
+log_elo_diff                   | 990                  | 2.00      %
+rest_days_diff                 | 971                  | 1.96      %
+tournament_importance          | 0                    | 0.00      %
+win_pct_diff                   | 990                  | 2.00      %
+
+----------------------------------------------------------------------
+2. VARIANCE THRESHOLDING (threshold=0.01)
+----------------------------------------------------------------------
+Dropped Features (0): None
+
+----------------------------------------------------------------------
+3. CORRELATION FILTERING (|r| > 0.85 with Mutual Info tie-breaking)
+----------------------------------------------------------------------
+Dropped Features (10):
+  - Dropped 'elo_diff' due to correlation with 'elo_win_prob' (|r| = 0.9562). MI('elo_win_prob'): 0.13737 >= MI('elo_diff'): 0.13113
+  - Dropped 'home_loss_pct' due to correlation with 'home_avg_goal_diff' (|r| = 0.9376). MI('home_avg_goal_diff'): 0.03404 >= MI('home_loss_pct'): 0.03188
+  - Dropped 'away_loss_pct' due to correlation with 'away_avg_goal_diff' (|r| = 0.9361). MI('away_avg_goal_diff'): 0.04636 >= MI('away_loss_pct'): 0.04506
+  - Dropped 'home_overall_win_pct' due to correlation with 'home_avg_goal_diff' (|r| = 0.9193). MI('home_avg_goal_diff'): 0.03404 >= MI('home_overall_win_pct'): 0.03357
+  - Dropped 'away_overall_win_pct' due to correlation with 'away_avg_goal_diff' (|r| = 0.9110). MI('away_avg_goal_diff'): 0.04636 >= MI('away_overall_win_pct'): 0.04185
+  - Dropped 'log_elo_diff' due to correlation with 'elo_win_prob' (|r| = 0.8847). MI('elo_win_prob'): 0.13737 >= MI('log_elo_diff'): 0.13118
+  - Dropped 'away_avg_goals_conceded' due to correlation with 'away_avg_goal_diff' (|r| = 0.8825). MI('away_avg_goal_diff'): 0.04636 >= MI('away_avg_goals_conceded'): 0.03392
+  - Dropped 'goal_avg_diff' due to correlation with 'win_pct_diff' (|r| = 0.8781). MI('win_pct_diff'): 0.07564 >= MI('goal_avg_diff'): 0.06005
+  - Dropped 'home_vs_away_field_pct' due to correlation with 'win_pct_diff' (|r| = 0.8721). MI('win_pct_diff'): 0.07564 >= MI('home_vs_away_field_pct'): 0.06435
+  - Dropped 'home_avg_goals_conceded' due to correlation with 'home_avg_goal_diff' (|r| = 0.8677). MI('home_avg_goal_diff'): 0.03404 >= MI('home_avg_goals_conceded'): 0.02287
+
+----------------------------------------------------------------------
+4. RECURSIVE FEATURE ELIMINATION (RFE rankings, Top 15 Selected)
+----------------------------------------------------------------------
+Feature Name                   | RFE Rank   | Selected  
+----------------------------------------------------------------------
+home_elo_before                | 1          | Yes       
+away_elo_before                | 1          | Yes       
+home_draw_pct                  | 1          | Yes       
+home_avg_goals_scored          | 1          | Yes       
+home_avg_goal_diff             | 1          | Yes       
+away_draw_pct                  | 1          | Yes       
+away_avg_goals_scored          | 1          | Yes       
+away_avg_goal_diff             | 1          | Yes       
+away_games_played              | 1          | Yes       
+away_away_win_pct              | 1          | Yes       
+elo_win_prob                   | 1          | Yes       
+goal_conceded_avg_diff         | 1          | Yes       
+form_diff                      | 1          | Yes       
+games_played_diff              | 1          | Yes       
+win_pct_diff                   | 1          | Yes       
+home_home_win_pct              | 2          | No        
+year                           | 3          | No        
+home_games_played              | 4          | No        
+rest_days_diff                 | 5          | No        
+away_rest_days                 | 6          | No        
+home_rest_days                 | 7          | No        
+away_form                      | 8          | No        
+home_form                      | 9          | No        
+month                          | 10         | No        
+tournament_importance          | 11         | No        
+is_neutral                     | 12         | No        
+
+----------------------------------------------------------------------
+5. PERMUTATION IMPORTANCE PRUNING (Evaluated on validation split)
+----------------------------------------------------------------------
+Feature Name                   | Mean Validation Importance     | Status    
+----------------------------------------------------------------------
+home_elo_before                | 0.002102                       | Kept      
+away_elo_before                | 0.000930                       | Kept      
+home_draw_pct                  | 0.001294                       | Kept      
+home_avg_goals_scored          | 0.000808                       | Kept      
+home_avg_goal_diff             | 0.001334                       | Kept      
+away_draw_pct                  | 0.001860                       | Kept      
+away_avg_goals_scored          | 0.000768                       | Kept      
+away_avg_goal_diff             | 0.000748                       | Kept      
+away_games_played              | 0.000970                       | Kept      
+away_away_win_pct              | 0.000768                       | Kept      
+elo_win_prob                   | 0.055099                       | Kept      
+goal_conceded_avg_diff         | 0.004123                       | Kept      
+form_diff                      | 0.001961                       | Kept      
+games_played_diff              | 0.002769                       | Kept      
+win_pct_diff                   | 0.001597                       | Kept      
+
+======================================================================
+FINAL SELECTED FEATURE SET
+======================================================================
+  1. home_elo_before
+  2. away_elo_before
+  3. home_draw_pct
+  4. home_avg_goals_scored
+  5. home_avg_goal_diff
+  6. away_draw_pct
+  7. away_avg_goals_scored
+  8. away_avg_goal_diff
+  9. away_games_played
+ 10. away_away_win_pct
+ 11. elo_win_prob
+ 12. goal_conceded_avg_diff
+ 13. form_diff
+ 14. games_played_diff
+ 15. win_pct_diff
+======================================================================

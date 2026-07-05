@@ -1,0 +1,68 @@
+services:
+  # Database Service (PostgreSQL)
+  db:
+    image: postgres:15-alpine
+    container_name: fifa_database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: fifa_worldcup
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - fifa_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fifa_worldcup"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Backend Service (FastAPI)
+  backend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.backend
+      network: host
+    container_name: fifa_backend
+    environment:
+      ENV: production
+      DEBUG: "false"
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: fifa_worldcup
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:?Set JWT_SECRET_KEY in your environment or .env file before running in production}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - fifa_network
+
+  # Frontend Service (Streamlit Dashboard)
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.frontend
+      network: host
+    container_name: fifa_frontend
+    environment:
+      API_URL: http://backend:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    networks:
+      - fifa_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  fifa_network:
+    driver: bridge

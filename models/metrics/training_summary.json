@@ -1,0 +1,62 @@
+{
+    "LogisticRegression": {
+        "train_accuracy": 0.5820363820111167,
+        "test_accuracy": 0.5817079332996463,
+        "training_time_seconds": 0.796134603999235
+    },
+    "DecisionTree": {
+        "train_accuracy": 0.9996715512885296,
+        "test_accuracy": 0.4702374936836786,
+        "training_time_seconds": 2.3058617349997803
+    },
+    "RandomForest": {
+        "train_accuracy": 0.9996715512885296,
+        "test_accuracy": 0.5722081859525012,
+        "training_time_seconds": 10.008366385001864
+    },
+    "SVM": {
+        "train_accuracy": 0.5834007074279939,
+        "test_accuracy": 0.5786760990399191,
+        "training_time_seconds": 9.480024735999905
+    },
+    "KNN": {
+        "train_accuracy": 0.6647801920161698,
+        "test_accuracy": 0.5313794845881759,
+        "training_time_seconds": 0.17779286299992236
+    },
+    "NaiveBayes": {
+        "train_accuracy": 0.533299646286003,
+        "test_accuracy": 0.5299646286003031,
+        "training_time_seconds": 0.025801994001085404
+    },
+    "ExtraTrees": {
+        "train_accuracy": 0.9996715512885296,
+        "test_accuracy": 0.567256189994947,
+        "training_time_seconds": 3.551998700000695
+    },
+    "XGBoost": {
+        "train_accuracy": 0.725922182920667,
+        "test_accuracy": 0.5742294087923193,
+        "training_time_seconds": 2.393192846000602
+    },
+    "LightGBM": {
+        "train_accuracy": 0.631632137443153,
+        "test_accuracy": 0.585245073269328,
+        "training_time_seconds": 1.6818420630006585
+    },
+    "CatBoost": {
+        "train_accuracy": 0.6768822637695806,
+        "test_accuracy": 0.5800909550277918,
+        "training_time_seconds": 25.627420485001494
+    },
+    "HistGradientBoosting": {
+        "train_accuracy": 0.6107377463365335,
+        "test_accuracy": 0.5835270338554825,
+        "training_time_seconds": 1.3530608399996709
+    },
+    "NeuralNetwork": {
+        "train_accuracy": 0.5871399696816574,
+        "test_accuracy": 0.5850429509853461,
+        "training_time_seconds": 38.513979413000925
+    }
+}

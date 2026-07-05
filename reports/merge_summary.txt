@@ -1,0 +1,38 @@
+============================================================
+  FIFA World Cup 2026 - Merge Summary
+  ============================================================
+
+  Total matches            :     49,475
+  Elo coverage             :     100.0%
+  FIFA ranking coverage    :       0.0%
+
+  New columns added
+  -----------------
+    home_elo_before   (pre-match Elo for home team)
+    away_elo_before   (pre-match Elo for away team)
+    home_elo_after    (post-match Elo for home team)
+    away_elo_after    (post-match Elo for away team)
+    home_fifa_rank    (FIFA rank as-of match date, if available)
+    away_fifa_rank    (FIFA rank as-of match date, if available)
+
+  Elo rating statistics
+  ---------------------
+    Min home Elo  : 939
+    Max home Elo  : 2109
+    Mean home Elo : 1563
+    Std home Elo  : 171
+
+  Top 10 teams by final Elo rating
+  ---------------------------------
+ 1. Argentina                      2081
+ 2. Spain                          2058
+ 3. France                         2027
+ 4. Colombia                       1959
+ 5. England                        1957
+ 6. Brazil                         1957
+ 7. Germany                        1939
+ 8. Portugal                       1937
+ 9. Morocco                        1929
+10. Mexico                         1925
+
+  ============================================================

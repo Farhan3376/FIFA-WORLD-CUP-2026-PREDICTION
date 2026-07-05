@@ -1,0 +1,18 @@
+{
+    "avg_win_prob_shift_per_100_elo": 0.08704787098843551,
+    "avg_win_prob_shift_per_0_1_form": 0.0023453791074059083,
+    "elo_sensitivity_by_matchup": {
+        "Argentina vs Brazil": 0.10769584279118065,
+        "England vs Croatia": 0.11213842162230293,
+        "USA vs Mexico": 0.10582374111439126,
+        "Germany vs Spain": 0.005687319363904732,
+        "France vs Senegal": 0.10389403005039806
+    },
+    "form_sensitivity_by_matchup": {
+        "Argentina vs Brazil": -0.002390847667056962,
+        "England vs Croatia": 0.003976607462129695,
+        "USA vs Mexico": -0.001724809616235111,
+        "Germany vs Spain": 0.0012880637793905145,
+        "France vs Senegal": 0.0023465670122172597
+    }
+}

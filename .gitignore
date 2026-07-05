@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Large / unused model artifacts -- only best_model.pkl (LightGBM) is served in
+# production, plus the small preprocessing pickles it depends on.
+models/trained/*.pkl
+!models/trained/best_model.pkl
+catboost_info/
+
+# Raw and intermediate datasets (large, regenerable via the training pipeline)
+data/raw/
+data/interim/
+data/processed/
+
+# Logs and local caches
+logs/
+*.log
+
+# Environment / secrets
+.env
+.env.*
+
+# Runtime SQLite database (contains user accounts and personal history)
+*.db
+backend/fifa_worldcup.db
+
+# OS / editor cruft
+.DS_Store

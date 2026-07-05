@@ -1,0 +1,91 @@
+{
+    "overall_brier_score": 0.5297150057900988,
+    "expected_calibration_error": 0.13991807084849228,
+    "class_brier_scores": {
+        "home_win": 0.18888234677177518,
+        "draw": 0.16016466957943004,
+        "away_win": 0.1806679894388935
+    },
+    "reliability_bins": [
+        {
+            "bin_idx": 0,
+            "bin_range": "[0.00, 0.10)",
+            "count": 0,
+            "mean_confidence": 0.0,
+            "accuracy": 0.0,
+            "deviation": 0.0
+        },
+        {
+            "bin_idx": 1,
+            "bin_range": "[0.10, 0.20)",
+            "count": 0,
+            "mean_confidence": 0.0,
+            "accuracy": 0.0,
+            "deviation": 0.0
+        },
+        {
+            "bin_idx": 2,
+            "bin_range": "[0.20, 0.30)",
+            "count": 0,
+            "mean_confidence": 0.0,
+            "accuracy": 0.0,
+            "deviation": 0.0
+        },
+        {
+            "bin_idx": 3,
+            "bin_range": "[0.30, 0.40)",
+            "count": 48,
+            "mean_confidence": 0.37458463735573444,
+            "accuracy": 0.20833333333333334,
+            "deviation": -0.1662513040224011
+        },
+        {
+            "bin_idx": 4,
+            "bin_range": "[0.40, 0.50)",
+            "count": 92,
+            "mean_confidence": 0.44688613711371344,
+            "accuracy": 0.6086956521739131,
+            "deviation": 0.16180951506019964
+        },
+        {
+            "bin_idx": 5,
+            "bin_range": "[0.50, 0.60)",
+            "count": 58,
+            "mean_confidence": 0.5422846975963483,
+            "accuracy": 0.6896551724137931,
+            "deviation": 0.1473704748174448
+        },
+        {
+            "bin_idx": 6,
+            "bin_range": "[0.60, 0.70)",
+            "count": 34,
+            "mean_confidence": 0.6485183582692384,
+            "accuracy": 0.7352941176470589,
+            "deviation": 0.08677575937782045
+        },
+        {
+            "bin_idx": 7,
+            "bin_range": "[0.70, 0.80)",
+            "count": 20,
+            "mean_confidence": 0.7431408234746258,
+            "accuracy": 0.8,
+            "deviation": 0.0568591765253742
+        },
+        {
+            "bin_idx": 8,
+            "bin_range": "[0.80, 0.90)",
+            "count": 4,
+            "mean_confidence": 0.8293603174588062,
+            "accuracy": 0.75,
+            "deviation": -0.07936031745880623
+        },
+        {
+            "bin_idx": 9,
+            "bin_range": "[0.90, 1.00)",
+            "count": 0,
+            "mean_confidence": 0.0,
+            "accuracy": 0.0,
+            "deviation": 0.0
+        }
+    ]
+}

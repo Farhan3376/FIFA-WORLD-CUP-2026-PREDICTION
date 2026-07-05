@@ -1,0 +1,23 @@
+============================================================
+        HISTORICAL WORLD CUP REPLAY VALIDATION REPORT
+============================================================
+
+Total Matches Replayed: 256
+Overall Prediction Accuracy: 58.59%
+
+Accuracy by Tournament Year:
+  * 2010 World Cup: 57.81%
+  * 2014 World Cup: 62.50%
+  * 2018 World Cup: 62.50%
+  * 2022 World Cup: 51.56%
+
+Classification Performance:
+  * home_win   | Precision: 60.14% | Recall: 81.13% | F1-Score: 69.08%
+  * draw       | Precision: 42.86% | Recall: 10.53% | F1-Score: 16.90%
+  * away_win   | Precision: 58.59% | Recall: 62.37% | F1-Score: 60.42%
+
+Confusion Matrix (Rows = Actual, Columns = Predicted):
+            home_win   draw    away_win
+  home_win   86         2       18
+  draw       28         6       23
+  away_win   29         6       58

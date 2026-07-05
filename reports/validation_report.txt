@@ -1,0 +1,288 @@
+════════════════════════════════════════════════════════════════
+  FIFA World Cup 2026 — Phase 1 Validation Report
+  Datasets validated : 4
+  Overall verdict    : WARN
+════════════════════════════════════════════════════════════════
+
+
+================================================================
+  Dataset : matches_clean (interim)
+  Verdict : WARN
+  Checks  : 15 total  |  12 PASS  |  3 WARN  |  0 FAIL
+================================================================
+
+[PASS]  Row Count
+       49,475 rows — above minimum threshold of 1,000.
+
+[PASS]  Duplicate Rows
+       No duplicate match rows found.
+
+[WARN]  Missing Values
+       1 column(s) have missing values.
+       Column                                 NaN%
+       --------------------------------------------
+         shootout_winner                     98.6%
+
+[PASS]  Data Types
+       All key columns have correct numeric dtypes.
+
+[PASS]  Negative Goals
+       No negative goal values found.
+
+[PASS]  Impossible Scores
+       No team scored more than 31 goals in any match.
+
+[PASS]  Result Encoding
+       All result values are valid (0, 1, 2).
+
+[PASS]  Result Consistency
+       result column is consistent with goal columns.
+
+[PASS]  Date Range
+       All dates in valid range [1872-present]. Span: 1872-11-30 → 2026-06-27
+
+[PASS]  Team Names
+       Team names look valid. 336 unique teams.
+
+[PASS]  Self-Play
+       No matches where a team plays itself.
+
+[WARN]  Elo Range
+       Elo columns not present in this dataset.
+
+[WARN]  Feature Range [0,1]
+       No bounded feature columns found.
+
+[PASS]  Target Balance
+       Result classes: 49%, 22%, 28%.
+       Home Win     :  24,244  (49.0%)
+         Draw         :  11,253  (22.7%)
+         Away Win     :  13,978  (28.3%)
+
+[PASS]  Leakage Guard
+       No post-match '_after' columns in this dataset.
+
+
+================================================================
+  Dataset : matches_merged (interim)
+  Verdict : WARN
+  Checks  : 15 total  |  12 PASS  |  3 WARN  |  0 FAIL
+================================================================
+
+[PASS]  Row Count
+       49,475 rows — above minimum threshold of 1,000.
+
+[PASS]  Duplicate Rows
+       No duplicate match rows found.
+
+[WARN]  Missing Values
+       3 column(s) have missing values.
+       Column                                 NaN%
+       --------------------------------------------
+         home_fifa_rank                     100.0%
+         away_fifa_rank                     100.0%
+         shootout_winner                     98.6%
+
+[PASS]  Data Types
+       All key columns have correct numeric dtypes.
+
+[PASS]  Negative Goals
+       No negative goal values found.
+
+[PASS]  Impossible Scores
+       No team scored more than 31 goals in any match.
+
+[PASS]  Result Encoding
+       All result values are valid (0, 1, 2).
+
+[PASS]  Result Consistency
+       result column is consistent with goal columns.
+
+[PASS]  Date Range
+       All dates in valid range [1872-present]. Span: 1872-11-30 → 2026-06-27
+
+[PASS]  Team Names
+       Team names look valid. 336 unique teams.
+
+[PASS]  Self-Play
+       No matches where a team plays itself.
+
+[PASS]  Elo Range
+       Elo values in plausible range [939, 2122].
+
+[WARN]  Feature Range [0,1]
+       No bounded feature columns found.
+
+[PASS]  Target Balance
+       Result classes: 49%, 22%, 28%.
+       Home Win     :  24,244  (49.0%)
+         Draw         :  11,253  (22.7%)
+         Away Win     :  13,978  (28.3%)
+
+[WARN]  Leakage Guard
+       2 '_after' column(s) present — intentional in interim files (Elo chain). Confirmed absent from matches_final.csv.
+       home_elo_after
+         away_elo_after
+
+
+================================================================
+  Dataset : matches_features (interim)
+  Verdict : WARN
+  Checks  : 15 total  |  14 PASS  |  1 WARN  |  0 FAIL
+================================================================
+
+[PASS]  Row Count
+       49,475 rows — above minimum threshold of 1,000.
+
+[PASS]  Duplicate Rows
+       No duplicate match rows found.
+
+[WARN]  Missing Values
+       22 column(s) have missing values.
+       Column                                 NaN%
+       --------------------------------------------
+         home_fifa_rank                     100.0%
+         away_fifa_rank                     100.0%
+         fifa_rank_diff                     100.0%
+         shootout_winner                     98.6%
+         home_home_win_pct                    0.7%
+         away_away_win_pct                    0.6%
+         away_overall_win_pct                 0.4%
+         away_draw_pct                        0.4%
+         away_loss_pct                        0.4%
+         away_avg_goals_scored                0.4%
+         away_avg_goals_conceded              0.4%
+         away_avg_goal_diff                   0.4%
+         away_games_played                    0.4%
+         away_form                            0.4%
+         home_loss_pct                        0.3%
+         home_avg_goals_scored                0.3%
+         home_avg_goals_conceded              0.3%
+         home_avg_goal_diff                   0.3%
+         home_games_played                    0.3%
+         home_draw_pct                        0.3%
+         home_overall_win_pct                 0.3%
+         home_form                            0.3%
+
+[PASS]  Data Types
+       All key columns have correct numeric dtypes.
+
+[PASS]  Negative Goals
+       No negative goal values found.
+
+[PASS]  Impossible Scores
+       No team scored more than 31 goals in any match.
+
+[PASS]  Result Encoding
+       All result values are valid (0, 1, 2).
+
+[PASS]  Result Consistency
+       result column is consistent with goal columns.
+
+[PASS]  Date Range
+       All dates in valid range [1872-present]. Span: 1872-11-30 → 2026-06-27
+
+[PASS]  Team Names
+       Team names look valid. 336 unique teams.
+
+[PASS]  Self-Play
+       No matches where a team plays itself.
+
+[PASS]  Elo Range
+       Elo values in plausible range [939, 2122].
+
+[PASS]  Feature Range [0,1]
+       All 10 bounded features stay in [0, 1].
+
+[PASS]  Target Balance
+       Result classes: 49%, 22%, 28%.
+       Home Win     :  24,244  (49.0%)
+         Draw         :  11,253  (22.7%)
+         Away Win     :  13,978  (28.3%)
+
+[PASS]  Leakage Guard
+       No post-match '_after' columns in this dataset.
+
+
+================================================================
+  Dataset : matches_final (ML-ready)
+  Verdict : WARN
+  Checks  : 15 total  |  7 PASS  |  8 WARN  |  0 FAIL
+================================================================
+
+[PASS]  Row Count
+       49,475 rows — above minimum threshold of 1,000.
+
+[WARN]  Duplicate Rows
+       1 duplicate feature vector(s) — expected in ML datasets; different matches can share identical computed features.
+
+[WARN]  Missing Values
+       21 column(s) have missing values.
+       Column                                 NaN%
+       --------------------------------------------
+         home_fifa_rank                     100.0%
+         fifa_rank_diff                     100.0%
+         away_fifa_rank                     100.0%
+         home_home_win_pct                    0.7%
+         away_away_win_pct                    0.6%
+         away_draw_pct                        0.4%
+         away_games_played                    0.4%
+         away_avg_goal_diff                   0.4%
+         away_avg_goals_conceded              0.4%
+         away_avg_goals_scored                0.4%
+         away_loss_pct                        0.4%
+         away_overall_win_pct                 0.4%
+         away_form                            0.4%
+         home_games_played                    0.3%
+         home_avg_goal_diff                   0.3%
+         home_avg_goals_conceded              0.3%
+         home_avg_goals_scored                0.3%
+         home_loss_pct                        0.3%
+         home_draw_pct                        0.3%
+         home_overall_win_pct                 0.3%
+         home_form                            0.3%
+
+[PASS]  Data Types
+       All key columns have correct numeric dtypes.
+
+[WARN]  Negative Goals
+       Goal columns not present in this dataset.
+
+[WARN]  Impossible Scores
+       Goal columns not present.
+
+[PASS]  Result Encoding
+       All result values are valid (0, 1, 2).
+
+[WARN]  Result Consistency
+       Required columns missing for this check.
+
+[WARN]  Date Range
+       'date' column not present.
+
+[WARN]  Team Names
+       Team name columns not present.
+
+[WARN]  Self-Play
+       Team columns not present.
+
+[PASS]  Elo Range
+       Elo values in plausible range [939, 2122].
+
+[PASS]  Feature Range [0,1]
+       All 10 bounded features stay in [0, 1].
+
+[PASS]  Target Balance
+       Result classes: 49%, 22%, 28%.
+       Home Win     :  24,244  (49.0%)
+         Draw         :  11,253  (22.7%)
+         Away Win     :  13,978  (28.3%)
+
+[PASS]  Leakage Guard
+       No post-match '_after' columns in this dataset.
+════════════════════════════════════════════════════════════════
+  Legend
+  [PASS] No issues found.
+  [WARN] Issues present but dataset is still usable.
+  [FAIL] Critical issues — investigate before model training.
+════════════════════════════════════════════════════════════════
