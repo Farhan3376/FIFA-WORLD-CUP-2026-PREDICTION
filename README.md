@@ -6,37 +6,37 @@ Built with FastAPI, Streamlit, LightGBM, SHAP, PostgreSQL, and Monte Carlo Simul
 
 ---
 
-## 📸 Dashboard Preview
+## Dashboard Preview
 
 <p align="center">
   <img src="docs/assets/dashboard-cover.png" width="900">
 </p>
 
-## 📸 Match Prediction
+## Match Prediction
 
 <p align="center">
   <img src="docs/assets/match_predictor.png" width="900">
 </p>
 
-## 📸 Tournament Simulator
+## Tournament Simulator
 
 <p align="center">
   <img src="docs/assets/tournament_simulator.png" width="900">
 </p>
 
-## 📸 Teams & Stats
+## Teams & Stats
 
 <p align="center">
   <img src="docs/assets/teams_and_stats.png" width="900">
 </p>
 
-## 📸 Historical Analytics
+## Historical Analytics
 
 <p align="center">
   <img src="docs/assets/Historical_Anaytical.png" width="900">
 </p>
 
-## 📸 AI Insights
+## AI Insights
 
 <p align="center">
   <img src="docs/assets/AI_Insight.png" width="900">
@@ -227,4 +227,5 @@ Interests:
 - Robotics
 
 GitHub: [http://github.com/Farhan3376](http://github.com/Farhan3376)
+
 LinkedIn: [www.linkedin.com/in/farhan-shahid-robotics](http://www.linkedin.com/in/farhan-shahid-robotics)
