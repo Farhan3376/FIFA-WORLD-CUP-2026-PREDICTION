@@ -1,5 +1,7 @@
 # FIFA World Cup 2026 Prediction & Tournament Intelligence Platform
 
+![Dashboard preview](docs/assets/dashboard-cover.png)
+
 An end-to-end AI analytics platform that predicts international football match outcomes and simulates the entire FIFA World Cup 2026. It combines a LightGBM classifier trained on ELO ratings and rolling team form with a real Monte Carlo tournament engine (12 groups, 48 teams, full knockout bracket simulation), and exposes both through a FastAPI backend and a multi-page Streamlit dashboard with SHAP-based explainability throughout.
 
 ---
